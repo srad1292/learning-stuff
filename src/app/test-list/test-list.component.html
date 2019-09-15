@@ -1,0 +1,31 @@
+<div [hidden]="!testList.length" class="table-container">
+
+    <mat-table [dataSource]="matdatasource">
+      <!-- User name Definition -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="patient">
+        <mat-header-cell *matHeaderCellDef> Patient </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.patient}} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.status}} </mat-cell>
+      </ng-container>
+    
+    
+      <!-- Header and Row Declarations -->
+      <mat-header-row *matHeaderRowDef ="displayed_columns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayed_columns"></mat-row>
+    </mat-table>
+
+    <mat-paginator 
+      [length]="numberOfTests"
+      [pageSize]="pageSize">
+    </mat-paginator>
+
+</div> 
