@@ -21,13 +21,15 @@ import { TestListComponent } from './test-list/test-list.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { TestListService } from './test-list.service';
+import { CamelAndDateComponent } from './camel-and-date/camel-and-date.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    TestListComponent
+    TestListComponent,
+    CamelAndDateComponent
   ],
   imports: [
     BrowserModule,

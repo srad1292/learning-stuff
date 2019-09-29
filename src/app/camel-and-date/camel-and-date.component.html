@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th>Before Camel</th>
+    <th>After Camel</th>
+    <th>Before Date</th>
+    <th>After Date</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let log of logs">
+      <td>{{log.beforeCamel}}</td>
+      <td>{{log.afterCamel}}</td>
+      <td>{{log.beforeDate}}</td>
+      <td>{{log.afterDate}}</td>
+    </tr>
+  </tbody>
+
+</table>
